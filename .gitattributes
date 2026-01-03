@@ -3,12 +3,29 @@
 
 # Dokümantasyon
 docs/** linguist-documentation
+*.md text eol=lf
 
-# Minecraft
+# Minecraft / metin tabanlı
 *.mcfunction text eol=lf whitespace=-trailing-space
 *.json text eol=lf
+*.jsonc text eol=lf
+*.lang text eol=lf
+*.properties text eol=lf
+*.mcmeta text eol=lf
 
-# Binary dosyalar
+# Minecraft / binary
 *.png binary
 *.nbt binary
 *.dat binary
+*.ogg binary
+*.ttf binary
+*.otf binary
+
+# IDE / OS çöpleri
+.vscode/** -text
+.idea/** -text
+*.log -text
+
+# Arşivler
+*.zip binary
+*.jar binary
