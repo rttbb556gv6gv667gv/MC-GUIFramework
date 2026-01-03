@@ -1,4 +1,4 @@
-<h1>MC GUI Framework</h1>
+<h1>MC GUI Framework (Minecraft 1.21.x)</h1>
 
 <p align="center">
   <img
