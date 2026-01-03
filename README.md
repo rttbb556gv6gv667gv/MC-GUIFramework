@@ -1,38 +1,163 @@
-# Minecraft GUI Framework
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?)](#contributors-)
-[![Discord](https://img.shields.io/badge/Discord-⛓-blue.svg)](https://discord.gg/VzjQ7kFKqD)
-[![Tutorial](https://img.shields.io/badge/Tutorial-▶-red.svg)](https://www.youtube.com/watch?v=z4tvTrqhBZE)
-[![Downloads](https://img.shields.io/github/downloads/CloudWolfYT/MC-GUIFramework/total.svg)](https://github.com/CloudWolfYT/MC-GUIFramework/releases)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<img src="images/social.png"
-     alt="Social Image"
-     style="float: left; margin-right: 10px;" />
+<h1>MC GUI Framework</h1>
 
-## How it Works 💡
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-This repo provides example datapacks for coding GUIs using barrels, minecart chests, and ender chests! There are tons and tons of comments provided to help explain what each line of code does, and you can watch the youtube video to get a better idea of what each module / key component is meant to do. <br>
-The resource pack provides you with assets for building your own GUIs to use with the datapacks.
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
+<p align="center">
+  <img
+    src="https://avatars.githubusercontent.com/u/64243799?v=4"
+    alt="MC GUI Framework Logo"
+    width="160"
+  />
+</p>
 
-## How to Use 📝
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-To make some UI's, simply add a folder under ui:menu with the name of your menu. Then add 1 folder per page of the menu, with each folder containing a "mask" and "open" function. Any item placed in the mask with custom data of ui_item.cmd will run that command, so in the demo the command to go to another page is just the "function ui:menu/(path to page)/open". The youtube video covers how to do this quite extensively.
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
+<p>
+Barrel / Minecart Chest / Ender Chest tabanlı Minecraft GUI Framework için
+esnek ve datapack dostu kullanım rehberi.
+</p>
 
-## Contributors 🧱
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+<p>
+<a href="https://github.com/rttbb556gv6gv667gv/MC-GUIFramework">
+GitHub Repo
+</a>
+</p>
+
+<hr>
+
+<h2>Özet</h2>
+
+<p>
+Bu framework, item bileşenleri içinde tanımlanan
+<code>ui_item</code> verileri sayesinde GUI etkileşimleri oluşturur.
+NBT tabanlı <code>tag:{}</code> kullanımı kaldırılmıştır.
+</p>
+
+<p>Kullanılan anahtarlar:</p>
+
+<ul>
+  <li><code>ui_item.cmd</code></li>
+  <li><code>ui_item.func</code></li>
+  <li><code>ui_item.gamemode</code></li>
+  <li><code>ui_item.player</code></li>
+</ul>
+
+<hr>
+
+<h2>Temel Kavramlar</h2>
+
+<ul>
+  <li><b>Mask</b>: GUI’nin görsel ve tıklanabilir öğeleri</li>
+  <li><b>Open</b>: GUI’yi açan fonksiyon</li>
+  <li><b>UI Item</b>: <code>ui_item</code> bileşeni taşıyan item</li>
+</ul>
+
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/64243799/placeholder-gui.png"
+    alt="MC GUI Framework Menu Örneği"
+    width="600"
+  />
+</p>
+
+<hr>
+
+<h2>Desteklenen ui_item Alanları</h2>
+
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/CloudWolfYT"><img src="https://avatars.githubusercontent.com/u/64243799?v=4" width="100px;" alt=""/><br /><sub><b>Cloud Wolf</b></sub></a><br /><a href="#" title="Project Creator">🔨</a></td>
-    <td align="center"><a href="https://gist.github.com/misode"><img src="https://avatars.githubusercontent.com/u/17352009?v=4" width="100px;" alt=""/><br /><sub><b>Misode</b></sub></a><br /><a href="#" title="Invisible Minecarts">💡</a></td>
+    <th>Anahtar</th>
+    <th>Açıklama</th>
+    <th>Örnek</th>
+  </tr>
+  <tr>
+    <td><code>ui_item.func</code></td>
+    <td>Datapack fonksiyonu çağırır</td>
+    <td><code>pack:menu/open</code></td>
+  </tr>
+  <tr>
+    <td><code>ui_item.cmd</code></td>
+    <td>Doğrudan komut çalıştırır</td>
+    <td><code>say Merhaba</code></td>
+  </tr>
+  <tr>
+    <td><code>ui_item.gamemode</code></td>
+    <td>Oyuncunun gamemode’unu değiştirir</td>
+    <td><code>creative</code></td>
+  </tr>
+  <tr>
+    <td><code>ui_item.player</code></td>
+    <td>Komut / fonksiyon hedefi</td>
+    <td><code>@p</code></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
+<hr>
+
+<h2>Öncelik Sırası (Önerilen)</h2>
+
+<ol>
+  <li><code>ui_item.func</code></li>
+  <li><code>ui_item.cmd</code></li>
+  <li><code>ui_item.gamemode</code></li>
+  <li><code>ui_item.player</code></li>
+</ol>
+
+<p>
+Bu sıra framework içindeki işleyici fonksiyonlara göre değiştirilebilir.
+</p>
+
+<hr>
+
+<h2>Bileşen Tabanlı ui_item Örnekleri</h2>
+
+<h3>Menü Açma</h3>
+
+<pre><code>{
+  ui_item:{
+    func:"&lt;namespace&gt;:menu/main/open"
+  }
+}
+</code></pre>
+
+<h3>Komut Çalıştırma</h3>
+
+<pre><code>{
+  ui_item:{
+    cmd:"give @p diamond 1"
+  }
+}
+</code></pre>
+
+<h3>Gamemode Değiştirme</h3>
+
+<pre><code>{
+  ui_item:{
+    gamemode:"creative",
+    player:"@p"
+  }
+}
+</code></pre>
+
+<hr>
+
+<h2>Güvenlik & İyi Uygulamalar</h2>
+
+<ul>
+  <li>
+    <code>tag:{}</code> ve klasik NBT kullanmayın
+    (crash item / exploit riski).
+  </li>
+  <li>
+    <code>ui_item.func</code> kullanımı önerilir.
+  </li>
+  <li>
+    <code>ui_item.cmd</code> ile <code>op</code>, <code>stop</code> gibi
+    tehlikeli komutlardan kaçının.
+  </li>
+  <li>
+    Selector kullanımında (<code>@a</code>, <code>@p</code>) dikkatli olun.
+  </li>
+</ul>
+
+<hr>
+
+<p>
+Bu belge MC-GUIFramework projesi temel alınarak hazırlanmıştır.
+</p>
