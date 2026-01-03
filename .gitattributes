@@ -1,2 +1,14 @@
-# Auto detect text files and perform LF normalization
+# Genel
 * text=auto
+
+# Dokümantasyon
+docs/** linguist-documentation
+
+# Minecraft
+*.mcfunction text eol=lf whitespace=-trailing-space
+*.json text eol=lf
+
+# Binary dosyalar
+*.png binary
+*.nbt binary
+*.dat binary
