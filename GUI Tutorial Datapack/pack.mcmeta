@@ -6,18 +6,5 @@
       "max_inclusive": 61
     },
     "description": "Custom GUI Pack for Minecraft 1.21.x"
-  },
-  "overlays": {
-    "entries": [
-      {
-        "directory": "customgui",
-        "formats": [
-          48,
-          61
-        ],
-        "min_format": 48,
-        "max_format": 61
-      }
-    ]
   }
 }
