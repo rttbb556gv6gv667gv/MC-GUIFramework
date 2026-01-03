@@ -1,11 +1,16 @@
 <h1>MC GUI Framework (Minecraft 1.21.x)</h1>
 
 <p align="center">
-  <img
-    src="https://avatars.githubusercontent.com/u/64243799?v=4"
-    alt="MC GUI Framework Logo"
-    width="160"
-  />
+  <img src="https://avatars.githubusercontent.com/u/64243799?v=4" width="160" alt="MC GUI Framework Logo">
+</p>
+
+<p align="center">
+  <a href="https://github.com/CloudWolfYT/MC-GUIFramework">
+    <img src="https://img.shields.io/badge/CloudWolfYT-MC--GUIFramework-5865F2?style=for-the-badge&logo=github">
+  </a>
+  <a href="https://github.com/CloudWolfYT/MC-GUIFramework/releases/tag/V1.1">
+    <img src="https://img.shields.io/badge/Minecraft-1.21%20Altı%20(V1.1)-2ecc71?style=for-the-badge&logo=minecraft">
+  </a>
 </p>
 
 <p>
@@ -51,7 +56,7 @@ NBT tabanlı <code>tag:{}</code> kullanımı kaldırılmıştır.
 <p align="center">
   <img
     src="https://github.com/rttbb556gv6gv667gv/MC-GUIFramework/blob/main/images/social.png?raw=true"
-    alt="MC GUI Framework Menu Örneği"
+    alt="MC GUI Framework Menü Örneği"
     width="600"
   />
 </p>
