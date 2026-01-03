@@ -50,7 +50,7 @@ NBT tabanlı <code>tag:{}</code> kullanımı kaldırılmıştır.
 
 <p align="center">
   <img
-    src="https://user-images.githubusercontent.com/64243799/placeholder-gui.png"
+    src="https://github.com/rttbb556gv6gv667gv/MC-GUIFramework/blob/main/images/social.png?raw=true"
     alt="MC GUI Framework Menu Örneği"
     width="600"
   />
