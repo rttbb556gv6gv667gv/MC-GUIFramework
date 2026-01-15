@@ -5,9 +5,6 @@
 [![Tutorial](https://img.shields.io/badge/Tutorial-▶-red.svg)](https://www.youtube.com/watch?v=z4tvTrqhBZE)
 [![Downloads](https://img.shields.io/github/downloads/CloudWolfYT/MC-GUIFramework/total.svg)](https://github.com/CloudWolfYT/MC-GUIFramework/releases)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-<img src="images/social.png"
-     alt="Social Image"
-     style="float: left; margin-right: 10px;" />
 
 ## How it Works 💡
 <!-- prettier-ignore-start -->
@@ -35,4 +32,5 @@ To make some UI's, simply add a folder under ui:menu with the name of your menu.
 </table>
 
 <!-- markdownlint-enable -->
+
 <!-- prettier-ignore-end -->
